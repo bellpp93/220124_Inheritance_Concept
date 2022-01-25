@@ -16,15 +16,26 @@ public class CustomerTest {
 		
 		VIPCustomer customerSon = new VIPCustomer(10020, "손흥민", 12345);
 		customerSon.bonusPoint = 50000;
-		System.out.println(customerSon.showCustomerInfo());
-		//손흥민님의 고객 등급은 VIP이며, 보너스 포인트는 50000입니다.
 		
 		int priceSon = customerSon.calcPrice(20000);
+		System.out.println(customerSon.showCustomerInfo());
+		//손흥민님의 고객 등급은 VIP이며, 보너스 포인트는 51000입니다.
 		System.out.println("상품 결제 금액: " + priceSon);
 		//상품 결제 금액: 18000 => VIP라서 10% 할인된 금액.
 		
 		int agentID = customerSon.getAgentID();
 		System.out.println("VIP 고객 담당 상담원 ID: " + agentID);
 		//VIP 고객 담당 상담원 ID: 12345
+		
+		System.out.println();
+		
+		GOLDCustomer customerLee = new GOLDCustomer(10030, "이강인");
+		customerLee.bonusPoint = 30000;
+		
+		int priceLee = customerLee.calcPrice(20000);
+		System.out.println(customerLee.showCustomerInfo());
+		//이강인님의 고객 등급은 GOLD이며, 보너스 포인트는 30400입니다.
+		System.out.println("상품 결제 금액: " + priceLee);
+		//상품 결제 금액: 18000
 	}
 }

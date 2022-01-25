@@ -3,7 +3,7 @@ package 상속예제;
 //자식 클래스 설계
 public class VIPCustomer extends Customer {
 	//멤버변수
-	double saleRatio;  //할인률
+	private double saleRatio;  //할인률
 	private int agentID;  //담당 상담원 아이디
 	
 	//생성자
