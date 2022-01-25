@@ -30,7 +30,6 @@ public class CustomerTest {
 		System.out.println();
 		
 		GOLDCustomer customerLee = new GOLDCustomer(10030, "¿Ã∞≠¿Œ");
-		customerLee.bonusPoint = 30000;
 		
 		int priceLee = customerLee.calcPrice(20000);
 		System.out.println(customerLee.showCustomerInfo());
